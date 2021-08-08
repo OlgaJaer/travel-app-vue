@@ -19,9 +19,8 @@ const routes = [
         component: () => import("@/views/ExperienceShow.vue"),
         props: (route) => ({ ...route.params, id: parseInt(route.params.id) }),
       },
-    ]
+    ],
   },
-  
 ];
 
 const router = createRouter({
