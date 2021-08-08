@@ -11,21 +11,27 @@
 <script>
 // import sourceData from "@/data.json";
 export default {
+  props: {
+    id: {
+      type: Number,
+      required: true,
+    },
+  },
   data() {
     return {
       destination: null,
     };
   },
-  computed: {
-    destinationId() {
-      return parseInt(this.$route.params.id);
-    },
-    // destination() {
-    //   return sourceData.destinations.find(
-    //     (destination) => destination.id === this.destinationId
-    //   );
-    // },
-  },
+  // computed: {
+  //   destinationId() {
+  //     return parseInt(this.$route.params.id);
+  //   },
+  // destination() {
+  //   return sourceData.destinations.find(
+  //     (destination) => destination.id === this.destinationId // parseInt(this.id)
+  //   );
+  // },
+  // },
   methods: {
     async initData() {
       const response = await fetch(
